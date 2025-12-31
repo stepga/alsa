@@ -354,7 +354,7 @@ func NewPlayer(sampleRate, channelNum, bytesPerSample, bufferSizeInBytes int) (*
 	if sampleRate != 44100 && sampleRate != 48000 {
 		return nil, fmt.Errorf("only 44100 Hz and 48000 are supported, please resample")
 	}
-	dev, err := openDevice("/dev/snd/pcmC0D0p")
+	dev, err := openDevice("/dev/snd/pcmC1D0p")
 	if err != nil {
 		return nil, err
 	}
